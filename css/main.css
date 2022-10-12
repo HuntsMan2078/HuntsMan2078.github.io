@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4159f0;
+  background: #d0ff21;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2390,7 +2390,7 @@ hr {
   display: inline-block;
 }
 body {
-  background: url("https://images.unsplash.com/photo-1664819089243-04a50cd3a667?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  background: url("/images/axp-photography-V_PDNzppCQA-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

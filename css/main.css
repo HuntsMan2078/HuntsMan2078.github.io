@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c1ff0a;
+  background: #e5ffff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2391,8 +2391,8 @@ hr {
 }
 body {
   background: url("/images/adam-borkowski-mtRSRhygBtQ-unsplash.jpg");
-  width: 100%;
-  height: 100%;
+  width: 10%;
+  height: 10%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

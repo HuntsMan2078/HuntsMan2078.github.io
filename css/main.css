@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #bebfe3;
+  background: #ffd4ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2390,7 +2390,7 @@ hr {
   display: inline-block;
 }
 body {
-  background: url("/images/adam-borkowski-mtRSRhygBtQ-unsplash.jpg");
+  background: url("/images/jiri-martinek-Tj0zyirs6_o-unsplash.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;

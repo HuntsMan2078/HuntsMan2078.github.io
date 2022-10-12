@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #cf0aa2;
+  background: #c9df62;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2390,7 +2390,7 @@ hr {
   display: inline-block;
 }
 body {
-  background: url("https://i.pinimg.com/736x/5c/18/0e/5c180e41723312149d2c59680786291d.jpg");
+  background: url("https://images.unsplash.com/photo-1661347334036-d484f970b1a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

@@ -1203,7 +1203,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #bd0de0;
+  background: #9dffc8;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2423,7 +2423,7 @@ hr {
   display: inline-block;
 }
 body {
-  background: url("/images/ulises-varela-I4G5fik98mE-unsplash.jpg");
+  background: url("/images/yeshi-kangrang-Qq7A85iCzhQ-unsplash.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;

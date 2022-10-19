@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ffavicon-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/favicon-16x16-next.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Matlab新手教程（2）​    在Matlab新手教程（1）中，我们介绍了Maltab数据类型中的第一种：数值类型，接下来我们介绍第二种：逻辑类型。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab新手教程">
+<meta property="og:url" content="http://example.com/2022/10/19/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(2)/index.html">
+<meta property="og:site_name" content="伯懿先生">
+<meta property="og:description" content="Matlab新手教程（2）​    在Matlab新手教程（1）中，我们介绍了Maltab数据类型中的第一种：数值类型，接下来我们介绍第二种：逻辑类型。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.imgdb.cn/item/634fdff516f2c2beb19503b0.jpg">
+<meta property="article:published_time" content="2022-10-19T07:57:22.000Z">
+<meta property="article:modified_time" content="2022-10-19T12:39:38.347Z">
+<meta property="article:author" content="何皓天">
+<meta property="article:tag" content="Matlab新手教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.imgdb.cn/item/634fdff516f2c2beb19503b0.jpg">
+
+<link rel="canonical" href="http://example.com/2022/10/19/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(2)/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Matlab新手教程 | 伯懿先生</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">伯懿先生</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">HunTsman</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/19/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(2)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/220220102.jpg">
+      <meta itemprop="name" content="何皓天">
+      <meta itemprop="description" content="不要吃老本，要立新功">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="伯懿先生">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Matlab新手教程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-10-19 15:57:22 / 修改时间：20:39:38" itemprop="dateCreated datePublished" datetime="2022-10-19T15:57:22+08:00">2022-10-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Matlab/" itemprop="url" rel="index"><span itemprop="name">Matlab</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Matlab新手教程（2）"><a href="#Matlab新手教程（2）" class="headerlink" title="Matlab新手教程（2）"></a>Matlab新手教程（2）</h1><p>​    在<a target="_blank" rel="noopener" href="https://huntsman.link/2022/10/17/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%EF%BC%881%EF%BC%89/">Matlab新手教程（1）中</a>，我们介绍了Maltab数据类型中的第一种：数值类型，接下来我们介绍第二种：逻辑类型。</p>
+<span id="more"></span>
+
+<h2 id="逻辑类型"><a href="#逻辑类型" class="headerlink" title="逻辑类型"></a>逻辑类型</h2><p>​    逻辑类型的数据是指布尔类型的数据及数据之间的逻辑关系。除了传统的数学运算，Maltab还支持关系和逻辑运算。这些运算的目的是提供求解真/假命题的答案。作为所有关系和逻辑表达式的输入，Matlab把任何非零数值当作真，把零当作假。所有关系和逻辑表达式的输出：对于真，输出为1；对于假，输出为0。逻辑类型数据在进行运算时需要用到关系操作符和逻辑运算符，如下表：</p>
+<table>
+<thead>
+<tr>
+<th align="center">关系操作符</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&lt;</td>
+<td align="center">小于</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center">小于或等于</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">大于</td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center">大于或等于</td>
+</tr>
+<tr>
+<td align="center">==</td>
+<td align="center">等于</td>
+</tr>
+<tr>
+<td align="center">~=</td>
+<td align="center">不等于</td>
+</tr>
+<tr>
+<td align="center">&amp;</td>
+<td align="center">与</td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td align="center">或</td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td align="center">非</td>
+</tr>
+</tbody></table>
+<p>​    Matlab中的关系操作符能够用来比较两个同样大小的数组，或者用来比较一个数组和一个标量。在后一种情况下，标量会和数组中的每一个元素进行比较，结果与数组大小一样，例如：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; a= <span class="number">1</span>:<span class="number">5</span>,b=<span class="number">7</span>-a</span><br><span class="line">a =</span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span>     <span class="number">4</span>     <span class="number">5</span></span><br><span class="line">b =</span><br><span class="line">     <span class="number">6</span>     <span class="number">5</span>     <span class="number">4</span>     <span class="number">3</span>     <span class="number">2</span></span><br><span class="line">&gt;&gt; TrueorFalse = (a == b)<span class="comment">%判断a与b中的元素是否相等</span></span><br><span class="line">TrueorFalse =</span><br><span class="line">  <span class="number">1</span>×<span class="number">5</span> logical 数组</span><br><span class="line">   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span><span class="comment">%这里我们看到没有元素相等，所以全部返回0</span></span><br><span class="line"><span class="comment">%%--------------------------------------------------------   </span></span><br><span class="line">&gt;&gt; a=<span class="number">1</span>:<span class="number">10</span>,b=<span class="number">10</span>-a</span><br><span class="line">a =</span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span>     <span class="number">4</span>     <span class="number">5</span>     <span class="number">6</span>     <span class="number">7</span>     <span class="number">8</span>     <span class="number">9</span>    <span class="number">10</span></span><br><span class="line">b =</span><br><span class="line">     <span class="number">9</span>     <span class="number">8</span>     <span class="number">7</span>     <span class="number">6</span>     <span class="number">5</span>     <span class="number">4</span>     <span class="number">3</span>     <span class="number">2</span>     <span class="number">1</span>     <span class="number">0</span></span><br><span class="line">&gt;&gt; TrueorFalse=(a==b)</span><br><span class="line">TrueorFalse =</span><br><span class="line">  <span class="number">1</span>×<span class="number">10</span> logical 数组</span><br><span class="line">   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">1</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span><span class="comment">%现在我们看到a与b中的5相等，返回1</span></span><br></pre></td></tr></table></figure>
+
+<p>​    同理，Matlab也可以做逻辑运算，如：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A = <span class="number">1</span>:<span class="number">10</span>;</span><br><span class="line">&gt;&gt; TrueorFalse = (A&gt;<span class="number">3</span>)&amp;(A&lt;<span class="number">8</span>)<span class="comment">%判断A中元素是否在3~8之间</span></span><br><span class="line">TrueorFalse =</span><br><span class="line">  <span class="number">1</span>×<span class="number">10</span> logical 数组</span><br><span class="line">   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">1</span>   <span class="number">1</span>   <span class="number">1</span>   <span class="number">1</span>   <span class="number">0</span>   <span class="number">0</span>   <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>​    除了上述关系操作符与逻辑运算符，Matlab还提供了大量其他关系的逻辑函数。</p>
+<ol>
+<li>**<em>xor(x,y)<em>*<em>：异或运算，</em>x*和</em>y</em>同时为假或真时返回0，否则返回1；</li>
+<li>***any(x)***：判断是否为零向量或零矩阵，如果是非零的，返回1，否则返回0；<br> 除此之外，Matlab还提供了一些函数，在运算过程中用来测试特殊值或者条件是否存在，并返回相应的表示结果，大家看看就行<br> <img src="https://pic1.imgdb.cn/item/634fdff516f2c2beb19503b0.jpg"></li>
+</ol>
+<h2 id="字符和字符串"><a href="#字符和字符串" class="headerlink" title="字符和字符串"></a>字符和字符串</h2><p>​    在Matlab中，文本当作特征字符串或者简单地当作字符串。字符串能够显示在屏幕上，也可以用来构成一些命令，这些命令在其他的命令中用于求值或者被执行。</p>
+<p>​    在Matlab中可能会遇到对字符和字符串的操作，笔者曾经就遇到过这样的问题，需要对字符进行转码。一个字符串是存储在一个<strong>行向量</strong>中的文本，这个行向量中的每一个元素代表一个字符。实际上，想必大家已经知道了，在Matlab中字符也是以ASCII码存储的。当在屏幕上显示字符变量的值时，显示出来的是文本，而不是ASCII数字。由于字符串是通过向量形式来存储的，因此可以通过对它的下标对字符串中的任何一个元素进行访问。字符矩阵也可以通过下标索引进行访问，但是<strong>矩阵的每行字符数必须相同</strong>。</p>
+<p>​    下面我们以一个最简单的例子来说明字符串和ASCII码之间的表达：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; str=<span class="string">&#x27;huntsman.link is a good web&#x27;</span></span><br><span class="line">str =</span><br><span class="line">    <span class="string">&#x27;huntsman.link is a good web&#x27;</span></span><br><span class="line">&gt;&gt; <span class="built_in">abs</span>(str)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">  列 <span class="number">1</span> 至 <span class="number">19</span></span><br><span class="line">   <span class="number">104</span>   <span class="number">117</span>   <span class="number">110</span>   <span class="number">116</span>   <span class="number">115</span>   <span class="number">109</span>    <span class="number">97</span>   <span class="number">110</span>    <span class="number">46</span>   <span class="number">108</span>   <span class="number">105</span>   <span class="number">110</span>   <span class="number">107</span>    <span class="number">32</span>   <span class="number">105</span>   <span class="number">115</span>    <span class="number">32</span>    <span class="number">97</span>    <span class="number">32</span></span><br><span class="line">  列 <span class="number">20</span> 至 <span class="number">27</span></span><br><span class="line">   <span class="number">103</span>   <span class="number">111</span>   <span class="number">111</span>   <span class="number">100</span>    <span class="number">32</span>   <span class="number">119</span>   <span class="number">101</span>    <span class="number">98</span></span><br></pre></td></tr></table></figure>
+
+<p>​    从以上代码我们可以看到，每一个字符都被转换成了ASCII码，那此时我们就可以对其进行操作，例如我们将所有的字符ASCII码加10</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; ASCII=<span class="built_in">ans</span>+<span class="number">10</span></span><br><span class="line">ASCII =</span><br><span class="line">  列 <span class="number">1</span> 至 <span class="number">19</span></span><br><span class="line">   <span class="number">114</span>   <span class="number">127</span>   <span class="number">120</span>   <span class="number">126</span>   <span class="number">125</span>   <span class="number">119</span>   <span class="number">107</span>   <span class="number">120</span>    <span class="number">56</span>   <span class="number">118</span>   <span class="number">115</span>   <span class="number">120</span>   <span class="number">117</span>    <span class="number">42</span>   <span class="number">115</span>   <span class="number">125</span>    <span class="number">42</span>   <span class="number">107</span>    <span class="number">42</span></span><br><span class="line">  列 <span class="number">20</span> 至 <span class="number">27</span></span><br><span class="line">   <span class="number">113</span>   <span class="number">121</span>   <span class="number">121</span>   <span class="number">110</span>    <span class="number">42</span>   <span class="number">129</span>   <span class="number">111</span>   <span class="number">108</span></span><br><span class="line">&gt;&gt; char(ASCII)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">    <span class="string">&#x27;rx~&#125;wkx8vsxu*s&#125;*k*qyyn*ol&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    我们再将操作完成后的ASCII码转为文字我们可以发现已经操作成功了。那我们再减10把它变回来。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; ASCII=ASCII<span class="number">-10</span></span><br><span class="line">ASCII =</span><br><span class="line">  列 <span class="number">1</span> 至 <span class="number">19</span></span><br><span class="line">   <span class="number">104</span>   <span class="number">117</span>   <span class="number">110</span>   <span class="number">116</span>   <span class="number">115</span>   <span class="number">109</span>    <span class="number">97</span>   <span class="number">110</span>    <span class="number">46</span>   <span class="number">108</span>   <span class="number">105</span>   <span class="number">110</span>   <span class="number">107</span>    <span class="number">32</span>   <span class="number">105</span>   <span class="number">115</span>    <span class="number">32</span>    <span class="number">97</span>    <span class="number">32</span></span><br><span class="line">  列 <span class="number">20</span> 至 <span class="number">27</span></span><br><span class="line">   <span class="number">103</span>   <span class="number">111</span>   <span class="number">111</span>   <span class="number">100</span>    <span class="number">32</span>   <span class="number">119</span>   <span class="number">101</span>    <span class="number">98</span></span><br><span class="line">&gt;&gt; char(ASCII)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">    <span class="string">&#x27;huntsman.link is a good web&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    所以我们发现了，因为字符串是数值数组，所以它们可以用Matlab中所有可利用的数组操作工具进行操作。例如，我们继续针对之前定义的字符串进行操作：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; U = str(<span class="number">1</span>:<span class="number">8</span>)</span><br><span class="line">U =</span><br><span class="line">    <span class="string">&#x27;huntsman&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>或者我们可以：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; U=str(<span class="number">8</span>:<span class="number">-1</span>:<span class="number">1</span>)</span><br><span class="line">U =</span><br><span class="line">    <span class="string">&#x27;namstnuh&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    所以，在Matlab中字符串像数组一样进行编址。这里再叮嘱一下，字符串中的单引号是通过两个连续的单引号表示的：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; str2=<span class="string">&#x27;I&#x27;&#x27;m HuntsMan2078&#x27;</span></span><br><span class="line">str2 =</span><br><span class="line">    <span class="string">&#x27;I&#x27;</span>m HuntsMan2078&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>​    另外，我们也可以像构建矩阵一样构建一个字符串：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; U=<span class="string">&#x27;I&#x27;&#x27;m &#x27;</span></span><br><span class="line">&gt;&gt; V=<span class="string">&#x27;HuntsMan2078&#x27;</span>;</span><br><span class="line">&gt;&gt; W=[U,V]</span><br><span class="line">W =</span><br><span class="line">    <span class="string">&#x27;I&#x27;</span>m HuntsMan2078&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数句柄"><a href="#函数句柄" class="headerlink" title="函数句柄"></a>函数句柄</h2><p>​    在Matlab中，对函数的调用方法分为直接调用和间接调用。    </p>
+<p><strong>直接调用</strong>，被调用的函数成为子函数。但是子函数只能被与其M文件同名的主函数或在M文件中的其他函数所调用，这里大家可以理解为子函数不是一个全局变量，它只在当前程序有用。</p>
+<p><strong>间接调用</strong>，使用函数句柄对函数进行调用可以避免上述的问题。函数句柄提供了一种间接调用函数的方法，。创建函数句柄需要用的操作符*@*。对Matlab库函数中提供的各种M文件中的函数和我们自己编写的程序中的内部函数，都可以创建函数句柄，从而可以通过函数句柄来实现对这些函数的间接调用。</p>
+<p>​    创建函数句柄的一般句法格式为：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Function_Handle = @Function_Filenmae;</span><br></pre></td></tr></table></figure>
+
+<p>​    其中：</p>
+<ul>
+<li><p>Function_Filename是函数所对应的M文件的名称或Matlab内部函数的名称。</p>
+</li>
+<li><p>@是句柄创建操作符。</p>
+</li>
+<li><p>Function_Handle变量保存了这一函数句柄，并在后续的运算中作为数据流进行传递。</p>
+</li>
+</ul>
+<p>例如，F_Handle=@cos就创建了Matlab内部函数cos的句柄，并将其保存在F_Handle变量中，在后续的运算过程中就可以通过F_Handle(x)来实现cos(x)的功能。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; F_Handle=@<span class="built_in">cos</span>;</span><br><span class="line">&gt;&gt; F_Handle(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">     <span class="number">1</span></span><br><span class="line">     </span><br><span class="line">&gt;&gt;F_Handle</span><br><span class="line">F_Handle =</span><br><span class="line">  包含以下值的 function_handle:</span><br><span class="line">    @<span class="built_in">cos</span></span><br></pre></td></tr></table></figure>
+
+<p>​    在通过函数句柄调用函数时，也需要指定函数的输入参数。如：可以通过F_Handle(arg1,arg2,…,argn)这样的调用格式来调用具有多个输入参数的函数。对于那些没有输入参数的函数，在使用句柄调用时，在句柄变量之后的圆括号中不填写变量名即可，即F_Handle()。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/" rel="tag"># Matlab新手教程</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/10/18/Latex%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/" rel="prev" title="LaTeX科研论文新手教程">
+      <i class="fa fa-chevron-left"></i> LaTeX科研论文新手教程
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%EF%BC%882%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">Matlab新手教程（2）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">逻辑类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.2.</span> <span class="nav-text">字符和字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8F%A5%E6%9F%84"><span class="nav-number">1.3.</span> <span class="nav-text">函数句柄</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="何皓天"
+      src="/images/220220102.jpg">
+  <p class="site-author-name" itemprop="name">何皓天</p>
+  <div class="site-description" itemprop="description">不要吃老本，要立新功</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HuntsMan2078" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HuntsMan2078" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:hht17759127687@gmail.com" title="E-Mail → mailto:hht17759127687@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">何皓天</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">8k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共4.6k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

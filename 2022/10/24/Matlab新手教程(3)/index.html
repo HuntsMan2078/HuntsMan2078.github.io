@@ -22,21 +22,20 @@
     var CONFIG = {"hostname":"huntsman.link","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="LaTeX科研论文新手教程（1）​    LaTeX是当今世界最流行和使用最广泛的TeX宏集。LaTeX在Plain TeX的基础上增加了很多新的功能，使用者可以更加方便地运用TeX的强大功能完成一些文档编辑任务。使用LaTeX的优势在于，用户不需要自己设计命令和宏等，即使用户没有排版和程序设计的背景知识，也可以熟练应用TeX提供的强大功能。因此，即使用户并不是很了解TeX，也可以在几天甚至几小时">
+  <meta name="description" content="​    在Matlab新手教程(2)中，我们学习了Matlab数据类型中的逻辑类型、字符和字符串类型以及函数句柄类型，今天将要学习一个比较难理解但是很有用的数据类型：元胞数组。 ​    在Matlab中进行运算的所有数据类型，都是按照数组及矩阵的形式进行存储和运算的，二者在Matlab中的剧本运算性质不同，数组强调元素对元素的运算，而矩阵则采用线性代数的运算方式。我们先介绍一下数组，数组的属性">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LaTeX科研论文新手教程">
-<meta property="og:url" content="http://huntsman.link/2022/10/18/Latex%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="Matlab新手教程3">
+<meta property="og:url" content="http://huntsman.link/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/index.html">
 <meta property="og:site_name" content="伯懿先生">
-<meta property="og:description" content="LaTeX科研论文新手教程（1）​    LaTeX是当今世界最流行和使用最广泛的TeX宏集。LaTeX在Plain TeX的基础上增加了很多新的功能，使用者可以更加方便地运用TeX的强大功能完成一些文档编辑任务。使用LaTeX的优势在于，用户不需要自己设计命令和宏等，即使用户没有排版和程序设计的背景知识，也可以熟练应用TeX提供的强大功能。因此，即使用户并不是很了解TeX，也可以在几天甚至几小时">
+<meta property="og:description" content="​    在Matlab新手教程(2)中，我们学习了Matlab数据类型中的逻辑类型、字符和字符串类型以及函数句柄类型，今天将要学习一个比较难理解但是很有用的数据类型：元胞数组。 ​    在Matlab中进行运算的所有数据类型，都是按照数组及矩阵的形式进行存储和运算的，二者在Matlab中的剧本运算性质不同，数组强调元素对元素的运算，而矩阵则采用线性代数的运算方式。我们先介绍一下数组，数组的属性">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-18T09:23:09.000Z">
-<meta property="article:modified_time" content="2022-10-20T03:48:11.283Z">
+<meta property="article:published_time" content="2022-10-24T13:43:51.000Z">
+<meta property="article:modified_time" content="2022-10-24T14:07:52.955Z">
 <meta property="article:author" content="何皓天">
-<meta property="article:tag" content="LaTeX">
-<meta property="article:tag" content="科研论文">
+<meta property="article:tag" content="Matlab新手教程">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://huntsman.link/2022/10/18/Latex%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/">
+<link rel="canonical" href="http://huntsman.link/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/">
 
 
 <script id="page-configurations">
@@ -49,7 +48,7 @@
   };
 </script>
 
-  <title>LaTeX科研论文新手教程 | 伯懿先生</title>
+  <title>Matlab新手教程3 | 伯懿先生</title>
   
 
 
@@ -200,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://huntsman.link/2022/10/18/Latex%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://huntsman.link/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/220220102.jpg">
@@ -213,7 +212,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          LaTeX科研论文新手教程
+          Matlab新手教程3
         </h1>
 
         <div class="post-meta">
@@ -222,28 +221,22 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-10-18 17:23:09" itemprop="dateCreated datePublished" datetime="2022-10-18T17:23:09+08:00">2022-10-18</time>
+              <time title="创建时间：2022-10-24 21:43:51 / 修改时间：22:07:52" itemprop="dateCreated datePublished" datetime="2022-10-24T21:43:51+08:00">2022-10-24</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-20 11:48:11" itemprop="dateModified" datetime="2022-10-20T11:48:11+08:00">2022-10-20</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+                  <a href="/categories/Matlab/" itemprop="url" rel="index"><span itemprop="name">Matlab</span></a>
                 </span>
             </span>
 
           
-            <span id="/2022/10/18/Latex%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/" class="post-meta-item leancloud_visitors" data-flag-title="LaTeX科研论文新手教程" title="阅读次数">
+            <span id="/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/" class="post-meta-item leancloud_visitors" data-flag-title="Matlab新手教程3" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -265,8 +258,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2022/10/18/Latex%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/10/18/Latex%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -276,14 +269,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.9k</span>
+              <span>740</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -295,32 +288,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="LaTeX科研论文新手教程（1）"><a href="#LaTeX科研论文新手教程（1）" class="headerlink" title="LaTeX科研论文新手教程（1）"></a>LaTeX科研论文新手教程（1）</h1><p>​    LaTeX是当今世界最流行和使用最广泛的TeX宏集。LaTeX在Plain TeX的基础上增加了很多新的功能，使用者可以更加方便地运用TeX的强大功能完成一些文档编辑任务。使用LaTeX的优势在于，用户不需要自己设计命令和宏等，即使用户没有排版和程序设计的背景知识，也可以熟练应用TeX提供的强大功能。因此，即使用户并不是很了解TeX，也可以在几天甚至几小时内生成很多具有书籍质量的印刷品。对于<strong>科研论文</strong>来说，当中会应用许多复杂的表格和数学公式。LaTeX的表现就更为出色，因此它非常适用于生成高质量印刷品的科技和数学类文档。</p>
-<span id="more"></span>
+        <p>​    在<a href="https://huntsman.link/2022/10/19/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(2)/">Matlab新手教程(2)</a>中，我们学习了Matlab数据类型中的逻辑类型、字符和字符串类型以及函数句柄类型，今天将要学习一个比较难理解但是很有用的数据类型：<strong>元胞数组</strong>。</p>
+<p>​    在Matlab中进行运算的所有数据类型，都是按照数组及矩阵的形式进行存储和运算的，二者在Matlab中的剧本运算性质不同，数组强调<u>元素对元素的运算</u>，而矩阵则采用<u>线性代数的运算方式</u>。我们先介绍一下数组，数组的属性及数组之间的逻辑关系，是编写程序时非常重要的两个方面。在Matlab平台上，数组的定义是广义的，它的元素可以是任何数据类型，比如我们先定义一个最基本的数组：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">a =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span></span><br></pre></td></tr></table></figure>
 
-<p>​    在笔者看来，目前比较好用的LaTeX写作软件有3个，分别是<a target="_blank" rel="noopener" href="https://cn.overleaf.com/">overleaf</a>，<a target="_blank" rel="noopener" href="http://www.ctex.org/HomePage">CTeX</a>，以及<a target="_blank" rel="noopener" href="https://miktex.org/">MiKTeX</a>，其中overleaf是一个云端的写作平台，许多期刊的格式可以直接导入，甚至投稿也可以通过overleaf完成。而CTeX是中国运筹协会发布的一款TeX的中文套装，其中是把MiKTeX和一些常用的相关工具，例如GSview、WinEdt等包装在一起制作的一个简易安装程序，所以有的时候它总会面临一些侵权问题。那么MiKTeX就是Windows平台下最好的TeX平台了。</p>
-<h2 id="LaTeX基本框架"><a href="#LaTeX基本框架" class="headerlink" title="LaTeX基本框架"></a>LaTeX基本框架</h2><p>一篇LaTeX文档的基本框架应该如下所示：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;article&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"><span class="keyword">\title</span>&#123;...&#125;</span><br><span class="line"><span class="keyword">\author</span>&#123;...&#125;</span><br><span class="line"><span class="keyword">\institute</span>&#123;...&#125;</span><br><span class="line"><span class="keyword">\maketitle</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;abstract&#125;</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"><span class="keyword">\end</span>&#123;abstract&#125;</span><br><span class="line"><span class="keyword">\keywords</span>&#123;...;...;...&#125;</span><br><span class="line"><span class="keyword">\section</span>&#123;...&#125;</span><br><span class="line"><span class="keyword">\subsection</span>&#123;...&#125;</span><br><span class="line"><span class="keyword">\subsection</span>&#123;...&#125;</span><br><span class="line"><span class="keyword">\section</span>*&#123;Acknowledgements&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;thebibliorgraphy&#125;</span><br><span class="line"><span class="keyword">\bibitem</span>&#123;&#125;</span><br><span class="line"><span class="keyword">\bibitem</span>&#123;&#125;</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"><span class="keyword">\end</span>&#123;thebibliorgraphy&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<p>​    那如果我们需要定义很多个相同步长元素的数组，我们可以使用冒号*:*来代表一系列数值，在没有指定步长前Matlab默认步长为1。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; a=<span class="number">1</span>:<span class="number">10</span></span><br><span class="line"></span><br><span class="line">a =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span>     <span class="number">4</span>     <span class="number">5</span>     <span class="number">6</span>     <span class="number">7</span>     <span class="number">8</span>     <span class="number">9</span>    <span class="number">10</span></span><br></pre></td></tr></table></figure>
 
-<p>​    接下来我们我们将分别讨论：</p>
-<h3 id="（1）-documentclass-类"><a href="#（1）-documentclass-类" class="headerlink" title="（1）\documentclass{类}"></a>（1）\documentclass{类}</h3><p>​    这是你一篇文章的奠基处，在这条语句中你需要确定整篇文章的处理格式，在期刊或者会议论文一般可选为<em>article</em>，再附上控制全局格式的选项，比如字体、字号、页面格式、纸张大小等。现在有很多的期刊都直接提供类模板，比如<em>Lecture Notes in Computer Science</em>提供的模板为lncs.cls，你只需要把相应的类名lncs放到{类}里就可以了。</p>
-<p><strong>注意</strong>：.cls文件需要放在当前文件夹下，否则会因为找不到该文件而提示出错。</p>
-<h3 id="（2）-usepackage-宏包"><a href="#（2）-usepackage-宏包" class="headerlink" title="（2）\usepackage{宏包}"></a>（2）\usepackage{宏包}</h3><p>​    宏包是用来增强功能的，你可以理解为你在游戏中增加进去的MOD，它能让你拥有更好的体验，宏包包含在.sty文件中，主要应用的宏包如下：</p>
-<ol>
-<li><p>CJK支持中文环境，对应宏包命令为*\usepackage{CJK}*，如果想在LaTeX中使用中文，需要使用这个宏包。</p>
-</li>
-<li><p>我们在写论文时，英文字体通常使用<em><strong>Times New Roman</strong></em>，这就需要用到宏包命令*\usepackage{times}*。</p>
-</li>
-<li><p>论文中不可避免的需要插入图片，需要用到的宏包是*\usepackage{graphicx}*。</p>
-</li>
-<li><p>在pdftex文件中生成的pdf是不具有超链接功能的，但如果需要也是需要添加宏包的，宏包命令为*\usepackage{pyperref}*。</p>
-</li>
-</ol>
-<p>以上为导言区，完成了导言部分，接下来就到了正文部分，正文部分位于</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<p>​    那么我们给出创建一个数字数组的最一般形式</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Array = <span class="built_in">i</span>:<span class="built_in">j</span>:k</span><br></pre></td></tr></table></figure>
 
-<p>之间。LaTeX命令的作用对象和范围类似于HTML的标签，有开始和结束标志，开始位置内会定义一些表现格式。导言区还可能有\pagestyle{选项}，页面样式，比如empty选项表示没有页眉和页脚。除此之外导言区还有其他全局性的设置。</p>
-<h3 id="（3）-title-标题"><a href="#（3）-title-标题" class="headerlink" title="（3）\title{标题}"></a>（3）\title{标题}</h3><p>​    正文部分首先是文章标题。题目</p>
+<p>​    创建从i开始，步长为j，到k结束的数字数组。如果i&gt;k，则Matlab会返回一个空矩阵，例如</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; a=<span class="number">1</span>:<span class="number">0.5</span>:<span class="number">10</span></span><br><span class="line"></span><br><span class="line">a =</span><br><span class="line"></span><br><span class="line">  列 <span class="number">1</span> 至 <span class="number">6</span></span><br><span class="line"></span><br><span class="line">    <span class="number">1.0000</span>    <span class="number">1.5000</span>    <span class="number">2.0000</span>    <span class="number">2.5000</span>    <span class="number">3.0000</span>    <span class="number">3.5000</span></span><br><span class="line"></span><br><span class="line">  列 <span class="number">7</span> 至 <span class="number">12</span></span><br><span class="line"></span><br><span class="line">    <span class="number">4.0000</span>    <span class="number">4.5000</span>    <span class="number">5.0000</span>    <span class="number">5.5000</span>    <span class="number">6.0000</span>    <span class="number">6.5000</span></span><br><span class="line"></span><br><span class="line">  列 <span class="number">13</span> 至 <span class="number">18</span></span><br><span class="line"></span><br><span class="line">    <span class="number">7.0000</span>    <span class="number">7.5000</span>    <span class="number">8.0000</span>    <span class="number">8.5000</span>    <span class="number">9.0000</span>    <span class="number">9.5000</span></span><br><span class="line"></span><br><span class="line">  列 <span class="number">19</span></span><br><span class="line"></span><br><span class="line">   <span class="number">10.0000</span></span><br><span class="line"><span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></span><br><span class="line">&gt;&gt; a=<span class="number">10</span>:<span class="number">0.5</span>:<span class="number">1</span></span><br><span class="line"></span><br><span class="line">a =</span><br><span class="line"></span><br><span class="line">  空的 <span class="number">1</span>×<span class="number">0</span> double 行向量</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -352,7 +332,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://huntsman.link/2022/10/18/Latex%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/" title="LaTeX科研论文新手教程">http://huntsman.link/2022/10/18/Latex科研论文新手教程/</a>
+    <a href="http://huntsman.link/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/" title="Matlab新手教程3">http://huntsman.link/2022/10/24/Matlab新手教程(3)/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -392,8 +372,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/LaTeX/" rel="tag"># LaTeX</a>
-              <a href="/tags/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/" rel="tag"># 科研论文</a>
+              <a href="/tags/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/" rel="tag"># Matlab新手教程</a>
           </div>
 
         
@@ -402,13 +381,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/10/17/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(1)/" rel="prev" title="Matlab新手教程(1)">
-      <i class="fa fa-chevron-left"></i> Matlab新手教程(1)
+    <a href="/2022/10/19/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(2)/" rel="prev" title="Matlab新手教程(2)">
+      <i class="fa fa-chevron-left"></i> Matlab新手教程(2)
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/10/19/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(2)/" rel="next" title="Matlab新手教程(2)">
-      Matlab新手教程(2) <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -468,7 +444,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LaTeX%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%EF%BC%881%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">LaTeX科研论文新手教程（1）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LaTeX%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6"><span class="nav-number">1.1.</span> <span class="nav-text">LaTeX基本框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89-documentclass-%E7%B1%BB"><span class="nav-number">1.1.1.</span> <span class="nav-text">（1）\documentclass{类}</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89-usepackage-%E5%AE%8F%E5%8C%85"><span class="nav-number">1.1.2.</span> <span class="nav-text">（2）\usepackage{宏包}</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%883%EF%BC%89-title-%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.3.</span> <span class="nav-text">（3）\title{标题}</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

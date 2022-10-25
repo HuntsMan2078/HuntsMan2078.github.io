@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/" class="post-title-link" itemprop="url">Matlab新手教程3</a>
+            <a href="/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/" class="post-title-link" itemprop="url">Matlab新手教程(3)</a>
         </h2>
 
         <div class="post-meta">
@@ -218,10 +218,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-10-24 21:43:51 / 修改时间：22:07:52" itemprop="dateCreated datePublished" datetime="2022-10-24T21:43:51+08:00">2022-10-24</time>
+              <time title="创建时间：2022-10-24 21:43:51" itemprop="dateCreated datePublished" datetime="2022-10-24T21:43:51+08:00">2022-10-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-10-25 22:20:26" itemprop="dateModified" datetime="2022-10-25T22:20:26+08:00">2022-10-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -233,7 +239,7 @@
             </span>
 
           
-            <span id="/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/" class="post-meta-item leancloud_visitors" data-flag-title="Matlab新手教程3" title="阅读次数">
+            <span id="/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/" class="post-meta-item leancloud_visitors" data-flag-title="Matlab新手教程(3)" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -259,14 +265,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>740</span>
+              <span>3.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -279,19 +285,14 @@
 
       
           <p>​    在<a href="https://huntsman.link/2022/10/19/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(2)/">Matlab新手教程(2)</a>中，我们学习了Matlab数据类型中的逻辑类型、字符和字符串类型以及函数句柄类型，今天将要学习一个比较难理解但是很有用的数据类型：<strong>元胞数组</strong>。</p>
-<p>​    在Matlab中进行运算的所有数据类型，都是按照数组及矩阵的形式进行存储和运算的，二者在Matlab中的剧本运算性质不同，数组强调<u>元素对元素的运算</u>，而矩阵则采用<u>线性代数的运算方式</u>。我们先介绍一下数组，数组的属性及数组之间的逻辑关系，是编写程序时非常重要的两个方面。在Matlab平台上，数组的定义是广义的，它的元素可以是任何数据类型，比如我们先定义一个最基本的数组：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">a =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<p>​    那如果我们需要定义很多个相同步长元素的数组，我们可以使用冒号*:*来代表一系列数值，在没有指定步长前Matlab默认步长为1。</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; a=<span class="number">1</span>:<span class="number">10</span></span><br><span class="line"></span><br><span class="line">a =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span>     <span class="number">4</span>     <span class="number">5</span>     <span class="number">6</span>     <span class="number">7</span>     <span class="number">8</span>     <span class="number">9</span>    <span class="number">10</span></span><br></pre></td></tr></table></figure>
-
-<p>​    那么我们给出创建一个数字数组的最一般形式</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Array = <span class="built_in">i</span>:<span class="built_in">j</span>:k</span><br></pre></td></tr></table></figure>
-
-<p>​    创建从i开始，步长为j，到k结束的数字数组。如果i&gt;k，则Matlab会返回一个空矩阵，例如</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; a=<span class="number">1</span>:<span class="number">0.5</span>:<span class="number">10</span></span><br><span class="line"></span><br><span class="line">a =</span><br><span class="line"></span><br><span class="line">  列 <span class="number">1</span> 至 <span class="number">6</span></span><br><span class="line"></span><br><span class="line">    <span class="number">1.0000</span>    <span class="number">1.5000</span>    <span class="number">2.0000</span>    <span class="number">2.5000</span>    <span class="number">3.0000</span>    <span class="number">3.5000</span></span><br><span class="line"></span><br><span class="line">  列 <span class="number">7</span> 至 <span class="number">12</span></span><br><span class="line"></span><br><span class="line">    <span class="number">4.0000</span>    <span class="number">4.5000</span>    <span class="number">5.0000</span>    <span class="number">5.5000</span>    <span class="number">6.0000</span>    <span class="number">6.5000</span></span><br><span class="line"></span><br><span class="line">  列 <span class="number">13</span> 至 <span class="number">18</span></span><br><span class="line"></span><br><span class="line">    <span class="number">7.0000</span>    <span class="number">7.5000</span>    <span class="number">8.0000</span>    <span class="number">8.5000</span>    <span class="number">9.0000</span>    <span class="number">9.5000</span></span><br><span class="line"></span><br><span class="line">  列 <span class="number">19</span></span><br><span class="line"></span><br><span class="line">   <span class="number">10.0000</span></span><br><span class="line"><span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></span><br><span class="line">&gt;&gt; a=<span class="number">10</span>:<span class="number">0.5</span>:<span class="number">1</span></span><br><span class="line"></span><br><span class="line">a =</span><br><span class="line"></span><br><span class="line">  空的 <span class="number">1</span>×<span class="number">0</span> double 行向量</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/24/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B(3)/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -723,7 +724,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>408</span>
+              <span>411</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -891,18 +892,18 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">10k</span>
+    <span title="站点总字数">13k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">11 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.6k字</span>
+  <span class="post-count">博客全站共6.9k字</span>
 </div>
 
     <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>

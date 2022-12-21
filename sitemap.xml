@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://huntsman.link/about/index.html</loc>
+    <loc>http://huntsman.link/google9b4b1d25b637975d.html</loc>
+    
+    <lastmod>2022-12-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huntsman.link/2022/11/04/%E5%B7%A5%E7%A8%8B%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6%E6%95%99%E7%A8%8B1/</loc>
     
     <lastmod>2022-11-06</lastmod>
     
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://huntsman.link/2022/11/04/%E5%B7%A5%E7%A8%8B%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6%E6%95%99%E7%A8%8B1/</loc>
+    <loc>http://huntsman.link/about/index.html</loc>
     
     <lastmod>2022-11-06</lastmod>
     
@@ -85,7 +94,7 @@
 
   <url>
     <loc>http://huntsman.link/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-12-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -93,42 +102,42 @@
   
   <url>
     <loc>http://huntsman.link/tags/LaTeX/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huntsman.link/tags/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huntsman.link/tags/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huntsman.link/tags/%E5%B7%A5%E7%A8%8B%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huntsman.link/tags/%E5%A4%A7%E5%AD%A6%E8%AF%BE%E7%A8%8B/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huntsman.link/tags/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -137,21 +146,21 @@
   
   <url>
     <loc>http://huntsman.link/categories/LaTeX/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huntsman.link/categories/Matlab/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huntsman.link/categories/%E5%B7%A5%E7%A8%8B%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -6,7 +6,7 @@
   <link href="http://huntsman.link/atom.xml" rel="self"/>
   
   <link href="http://huntsman.link/"/>
-  <updated>2024-12-19T14:42:57.652Z</updated>
+  <updated>2024-12-19T14:43:55.361Z</updated>
   <id>http://huntsman.link/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://huntsman.link/%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C.html"/>
     <id>http://huntsman.link/%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C.html</id>
     <published>2024-12-19T14:42:37.000Z</published>
-    <updated>2024-12-19T14:42:57.652Z</updated>
+    <updated>2024-12-19T14:43:55.361Z</updated>
     
     <content type="html"><![CDATA[<p>测试文档</p>]]></content>
     
@@ -33,6 +33,16 @@
     
     
     
+    <category term="有机朗肯循环" scheme="http://huntsman.link/categories/%E6%9C%89%E6%9C%BA%E6%9C%97%E8%82%AF%E5%BE%AA%E7%8E%AF/"/>
+    
+    
+    <category term="有机朗肯循环" scheme="http://huntsman.link/tags/%E6%9C%89%E6%9C%BA%E6%9C%97%E8%82%AF%E5%BE%AA%E7%8E%AF/"/>
+    
+    <category term="ORC" scheme="http://huntsman.link/tags/ORC/"/>
+    
+    <category term="低温余热回收" scheme="http://huntsman.link/tags/%E4%BD%8E%E6%B8%A9%E4%BD%99%E7%83%AD%E5%9B%9E%E6%94%B6/"/>
+    
+    <category term="实验台" scheme="http://huntsman.link/tags/%E5%AE%9E%E9%AA%8C%E5%8F%B0/"/>
     
   </entry>
   

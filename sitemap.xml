@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://huntsman.link/lib/pace/README.html</loc>
+    <loc>http://huntsman.link/lib/canvas-nest/README.html</loc>
     
     <lastmod>2024-12-19</lastmod>
     
@@ -92,15 +92,6 @@
   </url>
   
   <url>
-    <loc>http://huntsman.link/lib/three/renovate.json</loc>
-    
-    <lastmod>2024-12-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://huntsman.link/lib/three/package.json</loc>
     
     <lastmod>2024-12-19</lastmod>
@@ -110,7 +101,16 @@
   </url>
   
   <url>
-    <loc>http://huntsman.link/lib/canvas-nest/README.html</loc>
+    <loc>http://huntsman.link/lib/three/renovate.json</loc>
+    
+    <lastmod>2024-12-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huntsman.link/lib/pace/README.html</loc>
     
     <lastmod>2024-12-19</lastmod>
     
@@ -236,6 +236,13 @@
 
   
   <url>
+    <loc>http://huntsman.link/tags/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://huntsman.link/tags/LaTeX/</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -244,13 +251,6 @@
   
   <url>
     <loc>http://huntsman.link/tags/%E7%A7%91%E7%A0%94%E8%AE%BA%E6%96%87/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://huntsman.link/tags/Matlab%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -308,14 +308,14 @@
 
   
   <url>
-    <loc>http://huntsman.link/categories/LaTeX/</loc>
+    <loc>http://huntsman.link/categories/Matlab/</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://huntsman.link/categories/Matlab/</loc>
+    <loc>http://huntsman.link/categories/LaTeX/</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

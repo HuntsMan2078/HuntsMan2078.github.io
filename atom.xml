@@ -6,7 +6,7 @@
   <link href="http://huntsman.link/atom.xml" rel="self"/>
   
   <link href="http://huntsman.link/"/>
-  <updated>2023-09-16T17:23:57.000Z</updated>
+  <updated>2024-12-19T14:42:57.652Z</updated>
   <id>http://huntsman.link/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你好世界</title>
+    <link href="http://huntsman.link/%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C.html"/>
+    <id>http://huntsman.link/%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C.html</id>
+    <published>2024-12-19T14:42:37.000Z</published>
+    <updated>2024-12-19T14:42:57.652Z</updated>
+    
+    <content type="html"><![CDATA[<p>测试文档</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;测试文档&lt;/p&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>有机朗肯循环ORC实验台搭建(1)</title>
